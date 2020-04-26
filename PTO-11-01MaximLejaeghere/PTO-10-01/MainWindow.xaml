@@ -1,0 +1,47 @@
+﻿<Window x:Class="PTO_10_01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PTO_10_01"
+        mc:Ignorable="d"
+        Title="CartoonView" Height="450" Width="800">
+    <Grid RenderTransformOrigin="0.496,0.493" Background="LawnGreen" Margin="7,0,3.6,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <Label  Grid.Row="0" Grid.Column="0"  Content="Cartoon Beheer" HorizontalContentAlignment="Left" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
+        <Label  Grid.Row="0" Grid.Column="2"  Content="Naam" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
+        <Label  Grid.Row="2" Grid.Column="2"  Content="Creatie Datum" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
+        <Label  Grid.Row="4" Grid.Column="2"  Content="Pasfoto" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
+        <Label  Grid.Row="6" Grid.Column="2"  Content="Studio" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
+        <TextBox Grid.Row="5" Grid.Column="2" Name="txtAchternaam" HorizontalAlignment="Center" Text=""  Width="176" FontSize="20" Height="35" Foreground="ForestGreen"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Name="txtUitkomst" HorizontalAlignment="Center" Text=""  Width="176" FontSize="20" Height="35" Foreground="ForestGreen"/>
+        <Button Grid.Row="8" Grid.Column="0" Name="btnNew"   Content ="Starten" Margin="5,5,5,5" FontSize="18" Height="48" VerticalAlignment="Center" Foreground="White" Background="ForestGreen" Click="btnStarten_Click"/>
+        <Button Grid.Row="8" Grid.Column="1" Name="btnEdit"  Content ="Ingeven" Margin="5,5,5,5" IsEnabled="False" FontSize="18" Height="48" VerticalAlignment="Center"  Foreground="White" Background="ForestGreen" Click="btnIngeven_Click"/>
+        <Button Grid.Row="8" Grid.Column="2" Name="btnAdd" Content ="Resultaat" Margin="5,5,5,5" FontSize="18" Height="48" VerticalAlignment="Center"  Foreground="White" Background="ForestGreen" Click="btnResultaat_Click"/>
+        <ListBox Grid.Row="2" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="2" Foreground="ForestGreen" Background="White" Margin="5,5,5,5"/>
+        <DatePicker Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="3" VerticalAlignment="Center" Width="176" FontSize="20" Height="35" Foreground="ForestGreen" />
+        <ComboBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Width="176" FontSize="20" Height="35" Foreground="ForestGreen" SelectionChanged="ComboBox_SelectionChanged" >
+            <ComboBoxItem Content="Dreamworks"/>
+            <ComboBoxItem Content="nickelodeon"/>
+            <ComboBoxItem Content="Walt Disney"/>
+            <ComboBoxItem Content="Pixar"/>
+        </ComboBox>
+    </Grid>
+</Window>
