@@ -100,8 +100,17 @@
       <Name>Cartoons.BL</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="Images\" />
+    <Resource Include="Images\Arnold.jpg" />
+    <Resource Include="Images\Buzz lightyear.jpg" />
+    <Resource Include="Images\cat-mickey-mouse.jpg" />
+    <Resource Include="Images\Donald_Duck.jpg" />
+    <Resource Include="Images\Helga.jpg" />
+    <Resource Include="Images\Minnie-Mouse.jpg" />
+    <Resource Include="Images\Patrick.jpg" />
+    <Resource Include="Images\spongebob.jpg" />
+    <Resource Include="Images\WoodyPrise.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
