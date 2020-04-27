@@ -23,6 +23,7 @@ namespace PTO_10_01
        
         StudioModel studio = new StudioModel();
         CartoonModel cartoon = new CartoonModel();
+        string selectedName;
         public MainWindow()
         {
             InitializeComponent();
