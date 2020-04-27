@@ -26,18 +26,27 @@
         </Grid.ColumnDefinitions>
 
         <Label  Grid.Row="0" Grid.Column="0"  Content="Cartoon Beheer" HorizontalContentAlignment="Left" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
+        <Label  Grid.Row="1" Grid.Column="0" Name="lblWarning"  Content="" HorizontalContentAlignment="Left" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="Red"/>
         <Label  Grid.Row="0" Grid.Column="2"  Content="Naam" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
         <Label  Grid.Row="2" Grid.Column="2"  Content="Creatie Datum" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
         <Label  Grid.Row="4" Grid.Column="2"  Content="Pasfoto" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
         <Label  Grid.Row="6" Grid.Column="2"  Content="Studio" HorizontalContentAlignment="Center" FontSize="25" VerticalAlignment="Center" Height="45" Margin="0,10,0,9.8" Foreground="BlueViolet"/>
-        <TextBox Grid.Row="5" Grid.Column="2" Name="txtAchternaam" HorizontalAlignment="Center" Text=""  Width="176" FontSize="20" Height="35" Foreground="ForestGreen"/>
-        <TextBox Grid.Row="1" Grid.Column="2" Name="txtUitkomst" HorizontalAlignment="Center" Text=""  Width="176" FontSize="20" Height="35" Foreground="ForestGreen"/>
-        <Button Grid.Row="8" Grid.Column="0" Name="btnNew"   Content ="Starten" Margin="5,5,5,5" FontSize="18" Height="48" VerticalAlignment="Center" Foreground="White" Background="ForestGreen" Click="btnStarten_Click"/>
-        <Button Grid.Row="8" Grid.Column="1" Name="btnEdit"  Content ="Ingeven" Margin="5,5,5,5" IsEnabled="False" FontSize="18" Height="48" VerticalAlignment="Center"  Foreground="White" Background="ForestGreen" Click="btnIngeven_Click"/>
-        <Button Grid.Row="8" Grid.Column="2" Name="btnAdd" Content ="Resultaat" Margin="5,5,5,5" FontSize="18" Height="48" VerticalAlignment="Center"  Foreground="White" Background="ForestGreen" Click="btnResultaat_Click"/>
-        <ListBox Grid.Row="2" Grid.RowSpan="6" Grid.Column="0" Grid.ColumnSpan="2" Foreground="ForestGreen" Background="White" Margin="5,5,5,5"/>
-        <DatePicker Grid.Column="2" HorizontalAlignment="Center"  Grid.Row="3" VerticalAlignment="Center" Width="176" FontSize="20" Height="35" Foreground="ForestGreen" />
-        <ComboBox Grid.Column="2" HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Width="176" FontSize="20" Height="35" Foreground="ForestGreen" SelectionChanged="ComboBox_SelectionChanged" >
+        <TextBox Grid.Row="5" Grid.Column="2" Name="txtImage" HorizontalAlignment="Center" Text=""  Width="176" FontSize="20" Height="35" Foreground="ForestGreen"/>
+        <TextBox Grid.Row="1" Grid.Column="2" Name="txtName" HorizontalAlignment="Center" Text=""  Width="176" FontSize="20" Height="35" Foreground="ForestGreen"/>
+        <Button Grid.Row="8" Grid.Column="0" Name="btnNew"   Content ="Nieuw" Margin="5,5,5,5" FontSize="18" Height="48" VerticalAlignment="Center" Foreground="White" Background="ForestGreen" Click="btnNew_Click"/>
+        <Button Grid.Row="8" Grid.Column="2" Name="btnEdit" Content ="Aanpassen" Margin="5,5,5,5" FontSize="18" Height="48" VerticalAlignment="Center"  Foreground="White" Background="ForestGreen" Click="btnEdit_Click"/>
+        <ListBox Grid.Row="2" Grid.RowSpan="6" Name="listCartoons" Grid.Column="0" Grid.ColumnSpan="2" Foreground="ForestGreen" Background="White" Margin="5,5,5,5" SelectionChanged="listCartoons_SelectionChanged">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="{Binding Image}" Width="40" Height="50"></Image>
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>  
+            </ListBox>
+        <DatePicker Grid.Column="2" HorizontalAlignment="Center" Name="dateCreation"  Grid.Row="3" VerticalAlignment="Center" Width="176" FontSize="20" Height="35" Foreground="ForestGreen" />
+        <ComboBox Grid.Column="2" Name ="comboStudio"  HorizontalAlignment="Center" Grid.Row="7" VerticalAlignment="Center" Width="176" FontSize="20" Height="35" Foreground="ForestGreen" SelectionChanged="comboStudio_SelectionChanged" >
             <ComboBoxItem Content="Dreamworks"/>
             <ComboBoxItem Content="nickelodeon"/>
             <ComboBoxItem Content="Walt Disney"/>
